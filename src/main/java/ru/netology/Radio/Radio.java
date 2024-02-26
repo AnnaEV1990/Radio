@@ -1,55 +1,69 @@
 package ru.netology.Radio;
 
 public class Radio {
-    public int stationNumber;
-
-    public void stationNumberMax() {
-        stationNumber = 9;
-    }
+    private int stationNumber;
+    private int Volume;
 
     public int getStationNumber() {
         return stationNumber;
     }
 
-    public void setStationNumber(int newStationNumber) {
-        if (newStationNumber < 0) {
-            return;
-        }
-        if (newStationNumber > 9) {
-            newStationNumber = newStationNumber + 1;
-            {
-                return;
-            }
-        }
+    public void setStationNumber(int newStationNumber) {  // установка радиостанции
         stationNumber = newStationNumber;
     }
 
-    public int Volume;
-
-    public void VolumeMax() {
-        Volume = 100;
+    public void setNextStationNumber(int newStationNumber) {  // установка радиостанции
+        if (newStationNumber > 9) {
+            return;
+        }
+        if (newStationNumber < 0) {
+            return;
+        }
+        stationNumber = newStationNumber + 1;
     }
+
+    public void setPrevtStationNumber(int newStationNumber) {  // установка радиостанции
+        if (newStationNumber > 9) {
+            return;
+        }
+        if (newStationNumber < 0) {
+            return;
+        }
+        stationNumber = newStationNumber - 1;
+    }
+
 
     public int getVolume() {
         return Volume;
     }
 
-    public void setVolume(int newVolume) {
+    public void setVolume(int newVolume) {  // установка радиостанции
+        Volume = newVolume;
+    }
+
+    public void setNextVolume(int newVolume) {  // установка радиостанции
         if (newVolume > 100) {
             return;
         }
         if (newVolume < 0) {
             return;
         }
-        if (newVolume < 100) {
-            newVolume = newVolume + 1;
-            {
-                return;
-            }
-        }
-        Volume = newVolume;
+        Volume = newVolume + 1;
     }
+
+    public void setPrevVolume(int newVolume) {  // установка радиостанции
+        if (newVolume > 100) {
+            return;
+        }
+        if (newVolume < 0) {
+            return;
+        }
+        Volume = newVolume - 1;
+    }
+
 }
+
+
 
 
 
