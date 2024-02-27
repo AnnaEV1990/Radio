@@ -8,11 +8,11 @@ public class Radio {
         return stationNumber;
     }
 
-    public void setStationNumber(int newStationNumber) {  // установка радиостанции
+    public void setStationNumber(int newStationNumber) {
         stationNumber = newStationNumber;
     }
 
-    public void setNextStationNumber(int newStationNumber) {  // установка радиостанции
+    public void setNextStationNumber(int newStationNumber) {
         if (newStationNumber > 9) {
             return;
         }
@@ -22,7 +22,7 @@ public class Radio {
         stationNumber = newStationNumber + 1;
     }
 
-    public void setPrevtStationNumber(int newStationNumber) {  // установка радиостанции
+    public void setPrevtStationNumber(int newStationNumber) {
         if (newStationNumber > 9) {
             return;
         }
@@ -37,11 +37,11 @@ public class Radio {
         return Volume;
     }
 
-    public void setVolume(int newVolume) {  // установка радиостанции
+    public void setVolume(int newVolume) {
         Volume = newVolume;
     }
 
-    public void setNextVolume(int newVolume) {  // установка радиостанции
+    public void setNextVolume(int newVolume) {
         if (newVolume > 100) {
             return;
         }
@@ -51,7 +51,7 @@ public class Radio {
         Volume = newVolume + 1;
     }
 
-    public void setPrevVolume(int newVolume) {  // установка радиостанции
+    public void setPrevVolume(int newVolume) {
         if (newVolume > 100) {
             return;
         }
