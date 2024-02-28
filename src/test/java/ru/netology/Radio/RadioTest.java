@@ -4,9 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
-
     Radio radio = new Radio(30);
-
     @Test
     public void shouldNextStation() {
         Radio radio = new Radio(30);

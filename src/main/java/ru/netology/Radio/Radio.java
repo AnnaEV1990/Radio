@@ -10,18 +10,18 @@ public class Radio {
         private int minVolume = 0;
         private int maxVolume = 100;
 
-        public Radio(int numberStation) { // конструктор для задания числа радиостанций
+        public Radio(int numberStation) {
             this.maxStation = numberStation - 1;
         }
 
-        public Radio() { // конструктор для задания числа радиостанций по умолчанию
+        public Radio() {
         }
 
         public int getCurrentStation() {
             return currentStation;
         }
 
-        public void setCurrentStation(int newCurrentStation) { // указываем границы диапазона
+        public void setCurrentStation(int newCurrentStation) {
             if (newCurrentStation < minStation) {
                 return;
             }
@@ -35,7 +35,7 @@ public class Radio {
             if (currentStation < maxStation) {
                 currentStation = currentStation + 1;
             } else {
-                currentStation = minStation; // переход счетчика после 9 на 0
+                currentStation = minStation;
             }
         }
 
@@ -43,20 +43,16 @@ public class Radio {
             if (currentStation > minStation) {
                 currentStation = currentStation - 1;
             } else {
-                currentStation = maxStation; // переход счетчика после 0 на 9
+                currentStation = maxStation;
             }
         }
 
-//    public Radio(int minVolume, int maxVolume) { // конструктор для задания уровня громкости
-//        this.minVolume = minVolume;
-//        this.maxVolume = maxVolume;
-//    }
 
         public int getCurrentVolume() {
             return currentVolume;
         }
 
-        public void setCurrentVolume(int newCurrentVolume) { // указываем границы диапазона
+        public void setCurrentVolume(int newCurrentVolume) {
             if (newCurrentVolume < minVolume) {
                 return;
             }
