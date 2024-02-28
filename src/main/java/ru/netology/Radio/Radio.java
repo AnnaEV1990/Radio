@@ -2,7 +2,7 @@ package ru.netology.Radio;
 
 public class Radio {
     private int stationNumber;
-    private int Volume;
+    private int volume;
 
     public int getStationNumber() {
         return stationNumber;
@@ -56,51 +56,51 @@ public class Radio {
     }
 
     public int getVolume() {
-        return Volume;
+        return volume;
     }
 
     public void setVolume(int newVolume) { // новая станция
-        Volume = newVolume;
+        volume = newVolume;
     }
 
     public void setVolumeMax() { //установка мин станции
-        Volume = 100;
+        volume = 100;
 
     }
 
     public void increaseVolume() {  //увеличение станции
-        if (Volume < 100) {
-            Volume = Volume + 1;
+        if (volume < 100) {
+            volume = volume + 1;
         } else {
-            Volume = 0;
+            volume = 0;
         }
     }
 
     public void increaseVolumeMax() {
-        if (Volume < 100) {
+        if (volume < 100) {
             return;
 
         } else {
-            Volume = 0;
+            volume = 0;
 
         }
     }
 
     public void increaseVolumeMin() {
-        if (Volume > 0) {
+        if (volume > 0) {
             return;
 
         } else {
-            Volume = 0;
+            volume = 0;
 
         }
     }
 
     public void decreaseVolume() {        //уменьшение станции
-        if (Volume < 100) {
-            Volume = Volume - 1;
+        if (volume < 100) {
+            volume = volume - 1;
         } else {
-            Volume = 0;
+            volume = 0;
         }
 
     }
